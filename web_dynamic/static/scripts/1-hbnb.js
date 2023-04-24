@@ -8,6 +8,6 @@ $(document).ready(function () {
       delete amenities[$(this).data('id')];
     }
     let amenitiesList = Object.values(amenities).join(', ');
-    $('div.amenities h4').text(amenitiesList);
+    $('.amenities h4').text(amenitiesList);
   });
 });
