@@ -1,4 +1,5 @@
 $(document).ready(function () {
+
   let amenities = {};
 
   $('input[type="checkbox"]').change(function() {
@@ -11,11 +12,12 @@ $(document).ready(function () {
     $('.amenities h4').text(amenitiesList);
   });
 
-  $.get('http://0.0.0.0:5001/api/v1/status/', function (data) {
+  const url = 'http://' + window.location.hostname + ':5001/api/v1/status/';
+  $.get(url, function (data) {
     if (data.status === 'OK') {
-      $('div#api_status').addClass('available');
+      $('DIV#api_status').addClass('available');
     } else {
-      $('div#api_status').removeClass('available');
+      $('DIV#api_status').removeClass('available');
     }
   });
 });
