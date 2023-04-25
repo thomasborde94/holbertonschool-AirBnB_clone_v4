@@ -11,11 +11,12 @@ header .logo {
 }
 
 #api_status {
+    float: right;
     height: 40px;
     width: 40px;
     border-radius: 100%;
-    right: 30px;
-    align-items: center;
+    margin-right: 30px;
+    margin-top: 15px;
     background-color: #cccccc;
 }
 

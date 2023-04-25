@@ -3,7 +3,7 @@ $(document).ready(function () {
 
   $('input[type="checkbox"]').change(function() {
     if (this.checked) {
-      amenities[$(this).data('id')] = $(this).data('name');
+      amenities[$(this).attr('data-id')] = $(this).attr('data-name');
     } else {
       delete amenities[$(this).data('id')];
     }
